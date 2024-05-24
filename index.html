@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopify Product Data Retriever</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400" rel="stylesheet">
+	<link href="app.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<form id="form_product_url">
+			<label for="input_product_url">Please Enter Shopify Product URL</label>
+			<input type="url" placeholder="Please Enter Shopify Product URL" id="input_product_url" class="input_product_url" autofocus autocomplete="off">
+			<button type="submit" class="btn_retrieve_product_data">Retrieve Product Data</button>
+		</form>
+		
+		<p class="alert" id="alert" style="display: none;">Please input a valid Shopify shop/store Product URL.</p>
+		
+	</div>
+	
+	<table class="product_table" id="product_table" style="display: none;">
+		<thead>
+			<tr>
+				<th>Attribute</th>
+				<th>Data</th>
+			</tr>
+		</thead>
+		<tbody id="product_table_data">
+			<tr>
+				<td>Name</td>
+				<td id="product_name"></td>
+			</tr>
+			<tr>
+				<td>Manufacturer</td>
+				<td id="product_manufacturer"></td>
+			</tr>
+			<tr>
+				<td>Type</td>
+				<td id="product_type"></td>
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td id="product_description"></td>
+			</tr>
+			<tr>
+				<td>Options</td>
+				<td id="product_options"></td>
+			</tr>
+			<tr>
+				<td>SKU</td>
+				<td id="variant_sku"></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td id="variant_price"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<img width="100%" src="" id="base_image" alt="">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="gallery" id="gallery"></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<script src="app.js"></script>
+</body>
+</html>
